@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derek Lane | Creative Director Portfolio</title>
+    <meta name="description" content="Portfolio of Derek Lane, a Creative Director specializing in brand strategy, 3D motion, and digital product design. Explore selected works and methodology." />
+    
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dereklane.design/" />
+    <meta property="og:title" content="Derek Lane | Creative Director Portfolio" />
+    <meta property="og:description" content="Portfolio of Derek Lane, a Creative Director specializing in brand strategy, 3D motion, and digital product design." />
+    <meta property="og:image" content="https://dereklane.design/images/hero-portrait.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@dereklane" />
+    <meta name="twitter:title" content="Derek Lane | Creative Director Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Derek Lane, a Creative Director specializing in brand strategy, 3D motion, and digital product design." />
+    <meta name="twitter:image" content="https://dereklane.design/images/hero-portrait.jpg" />
+
+    <!-- JSON-LD Object -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Derek Lane",
+        "url": "https://dereklane.design",
+        "image": "https://dereklane.design/images/hero-portrait.jpg",
+        "jobTitle": "Creative Director",
+        "description": "Creative Director specializing in brand strategy, 3D motion, and digital product design.",
+        "sameAs": [
+          "https://linkedin.com/in/dereklane",
+          "https://twitter.com/dereklane"
+        ]
+      }
+    </script>
+    
+    <!-- Dynamic Favicon (Lime Green Square) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23d4fb79%22/></svg>">
+
+    <!-- Google Analytics (Placeholder - Commented out to prevent errors) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+    
+    <!-- Polyfill for process.env to prevent crashes in browser ESM environments -->
+    <script>
+      window.process = window.process || { env: { API_KEY: '' } };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                dark: '#0a0a0a',
+                accent: '#d4fb79', // Acid lime
+                gray: '#1f1f1f',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'marquee': 'marquee 25s linear infinite',
+              'marquee-reverse': 'marquee-reverse 25s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'marquee-reverse': {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      
+      /* Strictly hide horizontal scrollbar visually */
+      ::-webkit-scrollbar:horizontal {
+        height: 0px !important;
+        width: 0px !important;
+        display: none !important;
+        opacity: 0 !important;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d4fb79;
+      }
+
+      /* Ensure the horizontal thumb never shows a color even if hovered */
+      ::-webkit-scrollbar-thumb:horizontal {
+        background: transparent !important;
+        display: none !important;
+      }
+      
+      html {
+        /* Removed scroll-behavior: smooth to prevent mobile scroll jank */
+        width: 100%;
+        height: -webkit-fill-available;
+        /* DO NOT ADD overflow-x: hidden here, it breaks sticky in some contexts */
+        overscroll-behavior-y: none;
+      }
+      
+      body {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        width: 100%;
+        position: relative;
+        overflow-anchor: none; /* Fix for mobile scroll jumping */
+        overscroll-behavior-y: none;
+        
+        /* Clip overflow to prevent scrollbars without breaking sticky positioning */
+        overflow-x: clip;
+        overflow-y: auto;
+        
+        /* Hint to browser for scroll optimization */
+        touch-action: pan-y;
+      }
+
+      .glass-panel {
+        background: rgba(30, 30, 30, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      /* Custom Cursor Handling */
+      @media (pointer: fine) {
+        body, a, button, input, textarea, select, [role="button"] {
+          cursor: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
