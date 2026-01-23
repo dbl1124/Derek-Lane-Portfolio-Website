@@ -8,7 +8,6 @@ import Experience from './components/Experience';
 import Capabilities from './components/Capabilities';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import AIChatbot from './components/AIChatbot';
 import CustomCursor from './components/CustomCursor';
 import Preloader from './components/Preloader';
 import { AnimatePresence } from 'framer-motion';
@@ -23,7 +22,7 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined') {
       // 1. Force top immediately to reset scroll position
       window.scrollTo(0, 0);
-      
+
       // 2. Disable browser's default scroll restoration which often restores 
       // the page to the middle on mobile refreshes, breaking parallax start points
       if ('scrollRestoration' in history) {
@@ -43,7 +42,7 @@ const App: React.FC = () => {
     <ContentProvider>
       <div className="bg-brand-dark min-h-screen w-full selection:bg-brand-accent selection:text-black">
         <CustomCursor />
-        
+
         <AnimatePresence>
           {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
         </AnimatePresence>
@@ -61,7 +60,6 @@ const App: React.FC = () => {
               <Testimonials />
               <Contact />
             </main>
-            <AIChatbot />
           </>
         )}
       </div>
