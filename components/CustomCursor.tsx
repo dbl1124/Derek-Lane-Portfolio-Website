@@ -124,7 +124,7 @@ const CustomCursor: React.FC = () => {
                 width: isHovering ? 64 : 32,
                 height: isHovering ? 64 : 32,
                 scale: isClicking ? 0.8 : 1,
-                backgroundColor: isHovering ? '#d4fb79' : 'transparent',
+                backgroundColor: isHovering ? '#00f0ff' : 'transparent',
                 mixBlendMode: isHovering ? 'difference' : 'normal',
             }}
             transition={{

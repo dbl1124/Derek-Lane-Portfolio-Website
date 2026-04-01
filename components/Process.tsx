@@ -84,7 +84,7 @@ const ProcessStepItem: React.FC<ProcessStepItemProps> = ({ step, index, isActive
                 </p>
             </div>
             
-            <div className={`absolute bottom-0 left-0 h-1 bg-brand-accent transition-all duration-700 ease-out ${barWidth}`} />
+            <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-brand-accent to-brand-secondary transition-all duration-700 ease-out ${barWidth}`} />
         </motion.div>
     );
 };

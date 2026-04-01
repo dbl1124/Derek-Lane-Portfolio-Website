@@ -98,7 +98,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
       </div>
       
       {/* Progress Bar Line */}
-      <div className="absolute bottom-0 left-0 h-1 md:h-2 bg-brand-accent transition-all ease-linear" style={{ width: `${count}%` }} />
+      <div className="absolute bottom-0 left-0 h-1 md:h-2 bg-gradient-to-r from-brand-accent to-brand-secondary transition-all ease-linear" style={{ width: `${count}%` }} />
     </motion.div>
   );
 };

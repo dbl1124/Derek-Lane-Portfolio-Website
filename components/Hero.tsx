@@ -154,9 +154,10 @@ const Hero: React.FC = () => {
 
         if (dist < MOUSE_RADIUS) {
             proximity = 1 - (dist / MOUSE_RADIUS);
-            r = 255 + (212 - 255) * proximity;
-            g = 255 + (251 - 255) * proximity;
-            b = 255 + (121 - 255) * proximity;
+            // Electric Blue: RGB(0, 240, 255)
+            r = 255 + (0 - 255) * proximity;
+            g = 255 + (240 - 255) * proximity;
+            b = 255 + (255 - 255) * proximity;
         }
 
         const baseOpacity = 0.15;
@@ -230,9 +231,11 @@ const Hero: React.FC = () => {
                   // SAFETY NET fallback
                   fallbackSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80"
                   alt="Hero Background"
-                  className="w-full h-full object-cover opacity-55"
+                  className="w-full h-full object-cover opacity-55 grayscale"
               />
           </motion.div>
+          {/* Theme Color Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/50 via-brand-secondary/20 to-brand-secondary/50 mix-blend-color pointer-events-none" />
           {/* Subtle radial fade */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
         </div>
@@ -288,7 +291,7 @@ const Hero: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.95, filter: 'blur(10px)' }}
                   animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                   transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/40"
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary"
               >
                   {generalContent.hero.titleLine2}
               </motion.span>
